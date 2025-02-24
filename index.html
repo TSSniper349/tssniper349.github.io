@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paul's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="dark-mode">
+  <!-- Custom Cursor -->
+  <div id="customCursor"></div>
+
+  <!-- Particle Background Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Paul.dev</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <!-- Toggle Switch with Sun/Moon Icon -->
+    <button id="modeToggle" class="toggle-switch dark">
+      <span id="toggleIcon" class="toggle-icon">🌙</span>
+    </button>
+  </nav>
+
+  <main class="scroll-container">
+    <!-- Hero Section -->
+    <section id="hero" class="section hero">
+      <h1 class="hero-title">Imagine. Create. Inspire.</h1>
+      <p class="hero-subtitle">
+        I’m Paul, a Computer Science student passionate about creating innovative digital experiences. Discover my journey below.
+      </p>
+      <div class="hero-buttons">
+        <button class="explore-btn ripple">Explore My Work</button>
+        <a href="Resume.pdf" class="cv-btn ripple" download>
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <h2>About Me</h2>
+      <div class="about-container glass">
+        <img src="img/profile_photo.jpg" alt="Profile Photo" class="profile-photo">
+        <div class="about-text">
+          <p>
+            Hi, I'm Paul—a second-year Computer Science student based in Australia.
+            I love solving complex problems and turning creative ideas into practical solutions.
+            When I'm not coding, you'll find me cycling, working out, or exploring new technologies.
+            I'm passionate about continuous learning and building innovative digital experiences.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section (Projects & Case Studies Combined) -->
+    <section id="portfolio" class="section portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('pedestrianDetection')">
+          <h3>Pedestrian Detection</h3>
+          <p>Advanced AI for safer autonomous vehicles.</p>
+        </div>
+        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('infraredDetection')">
+          <h3>Infrared Detection</h3>
+          <p>Enhanced low-light detection using IR imaging.</p>
+        </div>
+        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('pedestrianDetection')">
+          <h3>Pedestrian Detection</h3>
+          <p>Advanced AI for safer autonomous vehicles.</p>
+        </div>
+        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('infraredDetection')">
+          <h3>Infrared Detection</h3>
+          <p>Enhanced low-light detection using IR imaging.</p>
+        </div>
+        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('pedestrianDetection')">
+          <h3>Pedestrian Detection</h3>
+          <p>Advanced AI for safer autonomous vehicles.</p>
+        </div>
+        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('infraredDetection')">
+          <h3>Infrared Detection</h3>
+          <p>Enhanced low-light detection using IR imaging.</p>
+        </div>
+        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('pedestrianDetection')">
+          <h3>Pedestrian Detection</h3>
+          <p>Advanced AI for safer autonomous vehicles.</p>
+        </div>
+        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('infraredDetection')">
+          <h3>Infrared Detection</h3>
+          <p>Enhanced low-light detection using IR imaging.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience">
+      <h2>Experience</h2>
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-bar-container">
+            <div class="timeline-bar"></div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="experience-card glass">
+            <div class="experience-header">
+              <img src="img/uoa_logo.gif" alt="TechCorp Logo" class="experience-logo">
+              <div class="experience-info">
+                <h3>The University of Adelaide</h3>
+                <span class="experience-date">July 2023 – Present</span>
+              </div>
+            </div>
+            <ul class="experience-bullets">
+              <li>Bachelor's of Computer Science (Advanced)</li>
+              <li>Developed a website connecting volunteers and organizations </li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Experience Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-bar-container">
+            <div class="timeline-bar"></div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="experience-card glass">
+            <div class="experience-header">
+              <img src="freelance-logo.png" alt="Freelance Logo" class="experience-logo">
+              <div class="experience-info">
+                <h3>Freelance Developer</h3>
+                <span class="experience-date">September 2023 – Present</span>
+              </div>
+            </div>
+            <ul class="experience-bullets">
+              <li>Built responsive websites using modern frameworks (React, Vue).</li>
+              <li>Implemented e-commerce solutions, increasing client sales by 40%.</li>
+              <li>Managed end-to-end project lifecycles with a focus on UX.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Add more timeline items as needed -->
+      </div>
+    </section>         
+
+    <!-- Contact Section with Integrated Socials -->
+    <section id="contact" class="section contact">
+      <div class="contact-container glass">
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>
+            Have a project idea or want to collaborate? Drop me a message and let's create something amazing together.
+          </p>
+          <a href="mailto:duybao21560@gmail.com">
+            <button class="contact-btn ripple">Contact Me</button>
+          </a>
+        </div>
+        <div class="social-links">
+          <a href="mailto:duybao21560@gmail.com" target="_blank" class="social-link">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/tssniper349" target="_blank" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/TSSniper349" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Portfolio Modal with Tabbed Navigation -->
+  <div id="portfolioModal" class="modal">
+    <div class="modal-content glass">
+      <span class="close-btn" onclick="closePortfolio()">&times;</span>
+      <div class="tab-nav">
+        <button class="tab-btn active" data-index="0">Overview</button>
+        <button class="tab-btn" data-index="1">Details</button>
+        <button class="tab-btn" data-index="2">Images</button>
+        <button class="tab-btn" data-index="3">Tech Stack</button>
+      </div>
+      <div class="tab-content-slider">
+        <!-- Each tab pane is contained and padded -->
+        <div class="tab-pane active"></div>
+        <div class="tab-pane"></div>
+        <div class="tab-pane"></div>
+        <div class="tab-pane"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
