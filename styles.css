@@ -9,8 +9,13 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   transition: background 0.5s, color 0.5s;
+}
+
+:root {
+  --brand-color: #2b3cfe;
 }
 
 /* ---------- Dark / Light Mode ---------- */
@@ -39,6 +44,7 @@ body:not(.dark-mode) .hero {
 body:not(.dark-mode) .hero-title {
   background: linear-gradient(90deg, #333, #666);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 body:not(.dark-mode) .explore-btn {
@@ -94,30 +100,36 @@ body:not(.dark-mode) .glass {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   z-index: 1000;
   transition: padding 0.3s, background 0.3s;
 }
 .navbar.scrolled {
-  padding: 10px 40px;
+  padding: 5px 20px;
   background: rgba(0, 0, 0, 0.8);
 }
 body:not(.dark-mode) .navbar {
   background: rgba(255,255,255,0.9);
 }
+/* Logo Container and Image */
 .navbar .logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: white;
+  display: flex;
+  align-items: center;
 }
-body:not(.dark-mode) .navbar .logo {
-  color: #333;
+.logo-img {
+  width: auto;
+  height: 40px;
+  transition: transform 0.3s ease;
 }
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
 .navbar .nav-links a {
   margin: 0 15px;
   color: white;
@@ -128,7 +140,7 @@ body:not(.dark-mode) .nav-links a {
   color: #333;
 }
 .navbar .nav-links a:hover {
-  color: #bbb;
+  color: var(--brand-color);
 }
 
 /* ---------- Navigation Highlight for Active Section ---------- */
@@ -145,7 +157,7 @@ body:not(.dark-mode) .nav-links a {
   right: 0;
   bottom: -5px;
   height: 3px;
-  background: linear-gradient(135deg, #3498db, #8e44ad);
+  background: linear-gradient(135deg, var(--brand-color), #8e44ad);
   border-radius: 2px;
   box-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
   opacity: 1;
@@ -155,13 +167,13 @@ body:not(.dark-mode) .nav-links a {
 
 /* For light mode */
 body:not(.dark-mode) .nav-links a.active::after {
-  background: linear-gradient(135deg, #3498db, #8e44ad);
+  background: linear-gradient(135deg, var(--brand-color), #8e44ad);
   box-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
 }
 
 /* For dark mode */
 .dark-mode .nav-links a.active::after {
-  background: linear-gradient(135deg, #8e44ad, #3498db);
+  background: linear-gradient(135deg, #8e44ad, var(--brand-color));
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
@@ -196,7 +208,7 @@ body:not(.dark-mode) .toggle-switch {
 
 /* ---------- Hero Section ---------- */
 .hero {
-  background: linear-gradient(135deg, #3498db, #8e44ad);
+  background: linear-gradient(135deg, #161616, #000000);
   color: white;
   min-height: 100vh;
   display: flex;
@@ -213,12 +225,14 @@ body:not(.dark-mode) .hero {
   font-size: 3em;
   background: linear-gradient(90deg, #f8f8f8, #ccc);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
 }
 body:not(.dark-mode) .hero-title {
   background: linear-gradient(90deg, #333, #666);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .hero-subtitle {
@@ -264,7 +278,7 @@ body:not(.dark-mode) .explore-btn {
   font-size: 1.1em;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  background: linear-gradient(135deg, var(--brand-color), #7f7ff3);
   color: #fff;
   text-decoration: none;
   cursor: pointer;
@@ -272,7 +286,7 @@ body:not(.dark-mode) .explore-btn {
 }
 .cv-btn:hover {
   transform: scale(1.05);
-  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  background: linear-gradient(135deg, #7f7ff3, var(--brand-color));
 }
 .cv-btn i {
   margin-right: 8px;
@@ -304,7 +318,7 @@ body:not(.dark-mode) .explore-btn {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #3498db;
+  border: 3px solid var(--brand-color);
 }
 
 .about-text {
@@ -335,7 +349,7 @@ body:not(.dark-mode) .explore-btn {
 /* ---------- Each Section ---------- */
 .section {
   min-height: 100vh;
-  padding: 80px 20px 20px;
+  padding: 100px 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -410,16 +424,16 @@ body:not(.dark-mode) .explore-btn {
   display: inline-flex;
   align-items: center;
   font-size: 1em;
-  color: #3498db;
+  color: var(--brand-color);
   text-decoration: none;
-  border: 2px solid #3498db;
+  border: 2px solid var(--brand-color);
   padding: 8px 15px;
   border-radius: 30px;
   transition: background 0.3s, color 0.3s;
 }
 
 .portfolio-link:hover {
-  background: #3498db;
+  background: var(--brand-color);
   color: #fff;
 }
 
@@ -480,7 +494,7 @@ body.dark-mode .portfolio-link:hover {
 .timeline-bar {
   width: 4px;
   height: 100%;
-  background: linear-gradient(to bottom, #3498db, #8e44ad);
+  background: linear-gradient(to bottom, var(--brand-color), #8e44ad);
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -491,7 +505,7 @@ body.dark-mode .portfolio-link:hover {
   width: 16px;
   height: 16px;
   background: #fff;
-  border: 3px solid #3498db;
+  border: 3px solid var(--brand-color);
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   margin-top: 20px; /* Offset from top */
@@ -520,7 +534,7 @@ body.dark-mode .portfolio-link:hover {
   border-radius: 10px;
   object-fit: cover;
   margin-right: 15px;
-  border: 2px solid #3498db;
+  border: 2px solid var(--brand-color);
 }
 
 .experience-info h3 {
@@ -550,8 +564,16 @@ body.dark-mode .portfolio-link:hover {
 }
 
 .experience-bullets a {
-  color: #3498db;
+  color: var(--brand-color);
   text-decoration: none;
+}
+
+.experience-bullets a:hover {
+  text-decoration: underline;
+}
+
+.dark-mode .experience-bullets a {
+  color: #8e44ad;
 }
 
 /* Dark Mode Overrides */
@@ -567,7 +589,7 @@ body.dark-mode .portfolio-link:hover {
 }
 
 .dark-mode .timeline-bar {
-  background: linear-gradient(to bottom, #8e44ad, #3498db);
+  background: linear-gradient(to bottom, #8e44ad, var(--brand-color));
 }
 
 .dark-mode .timeline-dot {
@@ -612,7 +634,7 @@ body.dark-mode .portfolio-link:hover {
   font-size: 1.1em;
   border: none;
   border-radius: 50px;
-  background: #e74c3c;
+  background: var(--brand-color);
   color: #fff;
   cursor: pointer;
   transition: transform 0.3s, background 0.3s;
@@ -620,7 +642,7 @@ body.dark-mode .portfolio-link:hover {
 
 .contact-btn:hover {
   transform: scale(1.05);
-  background: #c0392b;
+  background: #8e44ad;
 }
 
 /* ---------- Social Links ---------- */
@@ -667,114 +689,6 @@ body:not(.dark-mode) .social-link {
 
 body:not(.dark-mode) .social-link:hover {
   background: rgba(0, 0, 0, 0.1);
-}
-
-/* ---------- iOS-like Tab Navigation ---------- */
-.tab-nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 25px;
-  padding: 5px;
-  margin-bottom: 20px;
-}
-
-.dark-mode .modal-content .tab-nav {
-  background: rgba(0,0,0,0.5);
-}
-
-.tab-nav .tab-btn {
-  flex: 1;
-  padding: 10px 15px;
-  background: transparent;
-  border: none;
-  border-radius: 20px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-  color: #333;
-}
-
-.dark-mode .tab-nav .tab-btn {
-  color: #f0f0f0;
-}
-
-.tab-nav .tab-btn.active {
-  background: #fff;
-  color: #333;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.dark-mode .tab-nav .tab-btn.active {
-  background: #333;
-  color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-}
-
-/* ---------- Modal Tab Content ---------- */
-.tab-content-slider {
-  overflow: hidden;
-  min-height: 150px;
-}
-.tab-pane {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  display: none;
-  animation: slideInContent 0.5s ease forwards;
-}
-.tab-pane.active {
-  display: block;
-}
-
-/* ---------- Animations ---------- */
-@keyframes slideInContent {
-  from {
-    transform: translateX(50%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-} 
-
-/* Tab Navigation */
-.tab-nav {
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 2px solid #ccc;
-  margin-bottom: 20px;
-}
-.tab-nav .tab-btn {
-  flex: 1;
-  padding: 15px;
-  background: none;
-  border: none;
-  font-size: 1.1em;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.tab-nav .tab-btn.active {
-  background: #ddd;
-  font-weight: bold;
-}
-
-/* Tab Content Container */
-.tab-content-slider {
-  overflow: hidden;
-}
-.tab-pane {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  display: none;
-  animation: fadeIn 0.3s ease;
-}
-.tab-pane.active {
-  display: block;
 }
 
 /* ---------- Ripple Effect ---------- */
