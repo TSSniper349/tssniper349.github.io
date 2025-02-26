@@ -72,86 +72,6 @@ document.querySelectorAll(".tilt").forEach(el => {
   });
 });
 
-// Portfolio Modal Data (Now Combined Portfolio)
-const portfolioData = {
-  pedestrianDetection: {
-    overview: "Advanced AI improves pedestrian safety by leveraging cutting-edge detection technologies.",
-    details: "Detailed information about algorithm optimizations, sensor integration, and real-time performance metrics.",
-    images: "<img src='https://via.placeholder.com/600x300?text=Pedestrian+Detection' alt='Pedestrian Detection screenshot' />",
-    tech: "Tech Stack: Python, TensorFlow, OpenCV"
-  },
-  infraredDetection: {
-    overview: "Integrates RGB and infrared imaging to enhance object detection in low-light conditions.",
-    details: "In-depth discussion on sensor fusion, calibration techniques, and performance improvements in challenging conditions.",
-    images: "<img src='https://via.placeholder.com/600x300?text=Infrared+Detection' alt='Infrared Detection screenshot' />",
-    tech: "Tech Stack: C++, OpenCV, Machine Learning algorithms"
-  }
-};
-
-let currentPortfolio = null;
-
-// Open Portfolio Modal
-function openPortfolio(portfolioKey) {
-  currentPortfolio = portfolioData[portfolioKey];
-  renderModalContent(0); // start with first tab (Overview)
-  const modal = document.getElementById("portfolioModal");
-  modal.style.display = "flex";
-  document.body.style.overflow = "hidden"; // disable background scroll
-  
-  // Set first tab active
-  document.querySelectorAll(".tab-btn").forEach((btn, i) => {
-    btn.classList.toggle("active", i === 0);
-  });
-}
-
-// Close Portfolio Modal
-function closePortfolio() {
-  document.getElementById("portfolioModal").style.display = "none";
-  document.body.style.overflow = ""; // restore scrolling
-}
-
-// Close modal when clicking outside modal-content
-document.getElementById("portfolioModal").addEventListener("click", function(e) {
-  if (e.target === this) {
-    closePortfolio();
-  }
-});
-
-// Render Modal Content Based on Tab Index
-function renderModalContent(index) {
-  const slider = document.querySelector(".tab-content-slider");
-  let content = "";
-  switch(index) {
-    case 0:
-      content = `<h3>Overview</h3><p>${currentPortfolio.overview}</p>`;
-      break;
-    case 1:
-      content = `<h3>Details</h3><p>${currentPortfolio.details}</p>`;
-      break;
-    case 2:
-      content = `<h3>Images</h3>${currentPortfolio.images}`;
-      break;
-    case 3:
-      content = `<h3>Tech Stack</h3><p>${currentPortfolio.tech}</p>`;
-      break;
-    default:
-      content = `<p>No content available.</p>`;
-  }
-  slider.innerHTML = content;
-}
-
-// Tab Navigation for Modal
-const tabButtons = document.querySelectorAll(".tab-btn");
-tabButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const index = Number(button.dataset.index);
-    tabButtons.forEach((btn, i) => {
-      btn.classList.toggle("active", i === index);
-    });
-    renderModalContent(index);
-  });
-});
-
 // Particle Animation with Adaptive Color
 const canvas = document.getElementById("particleCanvas");
 const ctx = canvas.getContext("2d");
@@ -204,7 +124,7 @@ const scrollContainer = document.querySelector('.scroll-container');
 const sections = [...document.querySelectorAll('section')];
 const navLinks = [...document.querySelectorAll('.nav-links a')];
 let currentSectionIndex = 0;
-const OBSERVER_OPTIONS = { root: null, rootMargin: '0px', threshold: 0.51 };
+const OBSERVER_OPTIONS = { root: null, rootMargin: '0px', threshold: 0.3 };
 
 // IntersectionObserver to update active nav link and current section index
 function initNavObserver() {
@@ -257,7 +177,7 @@ function handleSnap() {
 let scrollEndTimeout;
 scrollContainer.addEventListener('scroll', () => {
   clearTimeout(scrollEndTimeout);
-  scrollEndTimeout = setTimeout(handleSnap, 150);
+  scrollEndTimeout = setTimeout(handleSnap, 500);
 });
 
 // Set up click events on nav links to scroll to the target section's top
@@ -277,10 +197,3 @@ function init() {
   initNavObserver();
 }
 init();
-
-
-
-
-
-
-

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body class="dark-mode">
+<body class="">
   <!-- Custom Cursor -->
   <div id="customCursor"></div>
 
@@ -24,17 +24,17 @@
       <a href="#contact">Contact</a>
     </div>
     <!-- Toggle Switch with Sun/Moon Icon -->
-    <button id="modeToggle" class="toggle-switch dark">
-      <span id="toggleIcon" class="toggle-icon">🌙</span>
+    <button id="modeToggle" class="toggle-switch ">
+      <span id="toggleIcon" class="toggle-icon">☀️</span>
     </button>
   </nav>
 
   <main class="scroll-container">
     <!-- Hero Section -->
     <section id="hero" class="section hero">
-      <h1 class="hero-title">Imagine. Create. Inspire.</h1>
+      <h1 class="hero-title">Goal. Passion. Discipline.</h1>
       <p class="hero-subtitle">
-        I’m Paul, a Computer Science student passionate about creating innovative digital experiences. Discover my journey below.
+        I’m Paul, a Computer Science student passionate about technology. Discover my journey below.
       </p>
       <div class="hero-buttons">
         <button class="explore-btn ripple">Explore My Work</button>
@@ -60,44 +60,34 @@
       </div>
     </section>
 
-    <!-- Portfolio Section (Projects & Case Studies Combined) -->
     <section id="portfolio" class="section portfolio">
       <h2>Portfolio</h2>
       <div class="portfolio-grid">
-        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('pedestrianDetection')">
-          <h3>Pedestrian Detection</h3>
-          <p>Advanced AI for safer autonomous vehicles.</p>
+        <!-- Portfolio Card 1 -->
+        <div class="portfolio-card glass ripple">
+          <img src="img/VolunteerConnect.png" alt="Volunteer Connect" class="portfolio-image">
+          <div class="portfolio-content">
+            <h3>Volunteer Connect</h3>
+            <p>Bringing together communities and organizations with just a few clicks</p>
+            <a href="https://github.com/TSSniper349/Volunteer_Connect" class="portfolio-link" target="_blank">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
         </div>
-        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('infraredDetection')">
-          <h3>Infrared Detection</h3>
-          <p>Enhanced low-light detection using IR imaging.</p>
+        <!-- Portfolio Card 2 -->
+        <div class="portfolio-card glass ripple">
+          <img src="img/EmergencyGuide.png" alt="Comprehensive Emergency Guide" class="portfolio-image">
+          <div class="portfolio-content">
+            <h3>Comprehensive Emergency Guide</h3>
+            <p>Step-by-step emergency guidance website designed to save lifes</p>
+            <a href="https://github.com/TSSniper349/ComprehensiveEmergencyGuide" class="portfolio-link" target="_blank">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
         </div>
-        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('pedestrianDetection')">
-          <h3>Pedestrian Detection</h3>
-          <p>Advanced AI for safer autonomous vehicles.</p>
-        </div>
-        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('infraredDetection')">
-          <h3>Infrared Detection</h3>
-          <p>Enhanced low-light detection using IR imaging.</p>
-        </div>
-        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('pedestrianDetection')">
-          <h3>Pedestrian Detection</h3>
-          <p>Advanced AI for safer autonomous vehicles.</p>
-        </div>
-        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('infraredDetection')">
-          <h3>Infrared Detection</h3>
-          <p>Enhanced low-light detection using IR imaging.</p>
-        </div>
-        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('pedestrianDetection')">
-          <h3>Pedestrian Detection</h3>
-          <p>Advanced AI for safer autonomous vehicles.</p>
-        </div>
-        <div class="portfolio-card tilt glass ripple" onclick="openPortfolio('infraredDetection')">
-          <h3>Infrared Detection</h3>
-          <p>Enhanced low-light detection using IR imaging.</p>
-        </div>
+        <!-- Add more portfolio cards as needed -->
       </div>
-    </section>
+    </section>    
 
     <section id="experience" class="section experience">
       <h2>Experience</h2>
@@ -109,20 +99,22 @@
           </div>
           <div class="experience-card glass">
             <div class="experience-header">
-              <img src="img/uoa_logo.gif" alt="TechCorp Logo" class="experience-logo">
+              <img src="img/uoa_logo.gif" alt="University Logo" class="experience-logo">
               <div class="experience-info">
                 <h3>The University of Adelaide</h3>
                 <span class="experience-date">July 2023 – Present</span>
               </div>
             </div>
             <ul class="experience-bullets">
-              <li>Bachelor's of Computer Science (Advanced)</li>
-              <li>Developed a website connecting volunteers and organizations </li>
-              <li></li>
+              <li><a href="https://www.adelaide.edu.au/degree-finder/2025/bcmsa_bcmpscadv.html">Bachelor of Computer Science (Advanced)</a></li>
+              <li>Working with peers to develop a website connecting &amp; bridging the gap between passionate volunteers and organizations</li>
+              <li>GPA: 7.0, WAM: 93+</li>
+              <li>Awarded <a href="https://www.adelaide.edu.au/student/global-iq-connect/what-is-global-iq-connect">Global IQ Connect</a></li>
+              <li>Recipient of the Global Citizens Scholarship</li>
             </ul>
           </div>
         </div>
-        <!-- Experience Item 2 -->
+
         <div class="timeline-item">
           <div class="timeline-bar-container">
             <div class="timeline-bar"></div>
@@ -130,20 +122,41 @@
           </div>
           <div class="experience-card glass">
             <div class="experience-header">
-              <img src="freelance-logo.png" alt="Freelance Logo" class="experience-logo">
+              <img src="img/LeQuyDonLogo.jpg" alt="High School Logo" class="experience-logo">
               <div class="experience-info">
-                <h3>Freelance Developer</h3>
-                <span class="experience-date">September 2023 – Present</span>
+                <h3>Le Quy Don High School for the Gifted</h3>
+                <span class="experience-date">September 2020 – June 2023</span>
               </div>
             </div>
             <ul class="experience-bullets">
-              <li>Built responsive websites using modern frameworks (React, Vue).</li>
-              <li>Implemented e-commerce solutions, increasing client sales by 40%.</li>
-              <li>Managed end-to-end project lifecycles with a focus on UX.</li>
+              <li>Executive Committee of <a href="https://web.facebook.com/YCCLQD">Young Creation Club</a> focusing on developing skills for students pursing Robotics, Programming, Electronics, etc.</li>
+              <li>Advanced to Top 15 National Final Round in Innovative Solutions of <a href="https://vi.wikipedia.org/wiki/H%E1%BB%99i_thi_Tin_h%E1%BB%8Dc_tr%E1%BA%BB_To%C3%A0n_qu%E1%BB%91c">Youth Informatics Contest</a> 2023</li>
+              <li>Semi-Finalist of U-Invent Season 4&5 (The University of Da Nang - VNUK) 2022-2023</li>
+              <li>Second Prize at Municipal Science and Engineering Fair on Technical Science 2022</li>
+              <li>Designated Project Lead of team Memoka for the Youth-on! Hackathon 2021 (UNICEF Vietnam)</li>
             </ul>
           </div>
         </div>
-        <!-- Add more timeline items as needed -->
+        <div class="timeline-item">
+          <div class="timeline-bar-container">
+            <div class="timeline-bar"></div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="experience-card glass">
+            <div class="experience-header">
+              <img src="img/ScoutsVN.jpg" alt="Scouts Logo" class="experience-logo">
+              <div class="experience-info">
+                <h3>Pathfinder Scouts of Vietnam</h3>
+                <span class="experience-date">March 2016 – March 2021</span>
+              </div>
+            </div>
+            <ul class="experience-bullets">
+              <li>Senior Patrol Leader for a troop of 20+ scouts over 3 years</li>
+              <li>Spearheaded personal development and soft skills enhancement through diverse activities and camping experiences</li>
+              <li>Collaborated with other patrol leaders, scoutmasters, and parents to achieve successful outcomes for troop activities</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>         
 

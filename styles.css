@@ -343,27 +343,113 @@ body:not(.dark-mode) .explore-btn {
 }
 
 /* ---------- Portfolio Section ---------- */
+.portfolio {
+  padding: 60px 20px;
+  text-align: center;
+}
+
 .portfolio h2 {
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #333;
 }
+
+/* Portfolio Grid */
 .portfolio-grid {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
+
+/* Portfolio Card */
 .portfolio-card {
-  padding: 20px;
+  width: 320px;
   border-radius: 15px;
-  width: 300px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  transition: transform 0.3s, opacity 0.3s;
-  opacity: 0;
-  animation: fadeInUp 1s forwards;
 }
+
 .portfolio-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Portfolio Image */
+.portfolio-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Portfolio Content */
+.portfolio-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.portfolio-content h3 {
+  font-size: 1.8em;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.portfolio-content p {
+  font-size: 1em;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Portfolio Link */
+.portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1em;
+  color: #3498db;
+  text-decoration: none;
+  border: 2px solid #3498db;
+  padding: 8px 15px;
+  border-radius: 30px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.portfolio-link:hover {
+  background: #3498db;
+  color: #fff;
+}
+
+.portfolio-link i {
+  margin-right: 8px;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode .portfolio h2 {
+  color: #fff;
+}
+
+body.dark-mode .portfolio-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .portfolio-content h3,
+body.dark-mode .portfolio-content p {
+  color: #f0f0f0;
+}
+
+body.dark-mode .portfolio-link {
+  color: #8e44ad;
+  border-color: #8e44ad;
+}
+
+body.dark-mode .portfolio-link:hover {
+  background: #8e44ad;
+  color: #fff;
 }
 
 /* Timeline Container */
@@ -461,6 +547,11 @@ body:not(.dark-mode) .explore-btn {
 
 .experience-bullets li {
   margin-bottom: 8px;
+}
+
+.experience-bullets a {
+  color: #3498db;
+  text-decoration: none;
 }
 
 /* Dark Mode Overrides */
@@ -576,46 +667,6 @@ body:not(.dark-mode) .social-link {
 
 body:not(.dark-mode) .social-link:hover {
   background: rgba(0, 0, 0, 0.1);
-}
-
-
-/* ---------- Modal Container ---------- */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(5px);
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-  padding: 20px;
-}
-
-/* ---------- Floating Glassy Modal Content ---------- */
-.modal-content {
-  position: relative;
-  padding: 30px;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 700px;
-  color: #333;
-  text-align: left;
-  animation: zoomIn 0.5s ease-in-out;
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255,255,255,0.3);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  transform: translateY(-10px);
-}
-
-/* Dark Mode Modal Content */
-.dark-mode .modal-content {
-  color: #f0f0f0;
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.7);
 }
 
 /* ---------- iOS-like Tab Navigation ---------- */
