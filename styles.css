@@ -110,7 +110,7 @@ body:not(.dark-mode) .glass {
   transition: padding 0.3s, background 0.3s;
 }
 .navbar.scrolled {
-  padding: 5px 20px;
+  padding: 5px 5px;
   background: rgba(0, 0, 0, 0.8);
 }
 body:not(.dark-mode) .navbar {
@@ -349,7 +349,7 @@ body:not(.dark-mode) .explore-btn {
 /* ---------- Each Section ---------- */
 .section {
   min-height: 100vh;
-  padding: 100px 20px 20px;
+  padding: 120px 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -720,6 +720,60 @@ body:not(.dark-mode) .social-link:hover {
   background: rgba(0,0,0,0.3);
   border-radius: 4px;
 }
+
+/* Smaller screen */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links a {
+    margin: 0;
+  }
+  /* If you have a logo + toggle button, ensure they fit too */
+  .logo-img {
+    width: 50px;
+    height: auto;
+    margin-right: 0;
+  }
+}
+
+/* Make timeline items stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .timeline-item {
+    display: block;
+    margin-bottom: 40px;
+  }
+  /* Hide or simplify the vertical bar and dot on small screens */
+  .timeline-bar-container {
+    display: none;
+  }
+  /* Let the experience card span full width */
+  .experience-card {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hide scrollbar (WebKit browsers) */
+  .scroll-container::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+  /* Hide scrollbar (Firefox, IE, Edge) */
+  .scroll-container {
+    -ms-overflow-style: none;  /* IE, Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  /* Hide mouse cursor entirely */
+  body, .scroll-container, .scroll-container * {
+    cursor: none !important;
+  }
+}
+
 
 /* ---------- Animations ---------- */
 @keyframes fadeIn {
