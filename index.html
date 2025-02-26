@@ -7,34 +7,36 @@
   <link rel="icon" href="img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
 </head>
-<body class="">
+<body>
   <!-- Custom Cursor -->
   <div id="customCursor"></div>
 
   <!-- Particle Background Canvas -->
   <canvas id="particleCanvas"></canvas>
+  
+  <!-- Header with Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/LogoTransparent.png" alt="Paul Nguyen Logo" class="logo-img" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="modeToggle" class="toggle-switch">
+        <span id="toggleIcon" class="toggle-icon">☀️</span>
+      </button>
+    </nav>
+  </header>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo"> 
-      <img src="img/LogoTransparent.png" alt="Personal Logo" class="logo-img">
-    </div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <!-- Toggle Switch with Sun/Moon Icon -->
-    <button id="modeToggle" class="toggle-switch ">
-      <span id="toggleIcon" class="toggle-icon">☀️</span>
-    </button>
-  </nav>
-
+  <!-- Main Content -->
   <main class="scroll-container">
     <!-- Hero Section -->
     <section id="hero" class="section hero">
@@ -54,7 +56,7 @@
     <section id="about" class="section about">
       <h2>About Me</h2>
       <div class="about-container glass">
-        <img src="img/profile_photo.jpg" alt="Profile Photo" class="profile-photo">
+        <img src="img/profile_photo.jpg" alt="Profile Photo of Paul" class="profile-photo" />
         <div class="about-text">
           <p>
             Hi, I'm Paul—a second-year Computer Science student based in Australia.
@@ -66,12 +68,12 @@
       </div>
     </section>
 
+    <!-- Portfolio Section -->
     <section id="portfolio" class="section portfolio">
       <h2>Portfolio</h2>
       <div class="portfolio-grid">
-        <!-- Portfolio Card 1 -->
-        <div class="portfolio-card glass ripple">
-          <img src="img/VolunteerConnect.png" alt="Volunteer Connect" class="portfolio-image">
+        <article class="portfolio-card glass ripple">
+          <img src="img/VolunteerConnect.png" alt="Volunteer Connect Screenshot" class="portfolio-image" />
           <div class="portfolio-content">
             <h3>Volunteer Connect</h3>
             <p>Bringing together communities and organizations with just a few clicks</p>
@@ -79,22 +81,21 @@
               <i class="fab fa-github"></i> View on GitHub
             </a>
           </div>
-        </div>
-        <!-- Portfolio Card 2 -->
-        <div class="portfolio-card glass ripple">
-          <img src="img/EmergencyGuide.png" alt="Comprehensive Emergency Guide" class="portfolio-image">
+        </article>
+        <article class="portfolio-card glass ripple">
+          <img src="img/EmergencyGuide.png" alt="Emergency Guide Screenshot" class="portfolio-image" />
           <div class="portfolio-content">
             <h3>Comprehensive Emergency Guide</h3>
-            <p>Step-by-step emergency guidance website designed to save lifes</p>
+            <p>Step-by-step emergency guidance website designed to save lives</p>
             <a href="https://github.com/TSSniper349/ComprehensiveEmergencyGuide" class="portfolio-link" target="_blank">
               <i class="fab fa-github"></i> View on GitHub
             </a>
           </div>
-        </div>
-        <!-- Add more portfolio cards as needed -->
+        </article>
       </div>
-    </section>    
+    </section>
 
+    <!-- Experience Section -->
     <section id="experience" class="section experience">
       <h2>Experience</h2>
       <div class="timeline-container">
@@ -103,22 +104,22 @@
             <div class="timeline-bar"></div>
             <div class="timeline-dot"></div>
           </div>
-          <div class="experience-card glass">
-            <div class="experience-header">
-              <img src="img/uoa_logo.gif" alt="University Logo" class="experience-logo">
+          <article class="experience-card glass">
+            <header class="experience-header">
+              <img src="img/uoa_logo.gif" alt="University of Adelaide Logo" class="experience-logo" />
               <div class="experience-info">
                 <h3>The University of Adelaide</h3>
                 <span class="experience-date">July 2023 – Present</span>
               </div>
-            </div>
+            </header>
             <ul class="experience-bullets">
               <li><a href="https://www.adelaide.edu.au/degree-finder/2025/bcmsa_bcmpscadv.html">Bachelor of Computer Science (Advanced)</a></li>
-              <li>Working with peers to develop a website connecting &amp; bridging the gap between passionate volunteers and organizations</li>
+              <li>Developing a website to connect passionate volunteers with organizations</li>
               <li>GPA: 7.0, WAM: 93+</li>
               <li>Awarded <a href="https://www.adelaide.edu.au/student/global-iq-connect/what-is-global-iq-connect">Global IQ Connect</a></li>
               <li>Recipient of the Global Citizens Scholarship</li>
             </ul>
-          </div>
+          </article>
         </div>
 
         <div class="timeline-item">
@@ -126,47 +127,48 @@
             <div class="timeline-bar"></div>
             <div class="timeline-dot"></div>
           </div>
-          <div class="experience-card glass">
-            <div class="experience-header">
-              <img src="img/LeQuyDonLogo.jpg" alt="High School Logo" class="experience-logo">
+          <article class="experience-card glass">
+            <header class="experience-header">
+              <img src="img/LeQuyDonLogo.jpg" alt="Le Quy Don High School Logo" class="experience-logo" />
               <div class="experience-info">
                 <h3>Le Quy Don High School for the Gifted</h3>
                 <span class="experience-date">September 2020 – June 2023</span>
               </div>
-            </div>
+            </header>
             <ul class="experience-bullets">
-              <li>Executive Committee of <a href="https://web.facebook.com/YCCLQD">Young Creation Club</a> focusing on developing skills for students pursing Robotics, Programming, Electronics, etc.</li>
-              <li>Advanced to Top 15 National Final Round in Innovative Solutions of <a href="https://vi.wikipedia.org/wiki/H%E1%BB%99i_thi_Tin_h%E1%BB%8Dc_tr%E1%BA%BB_To%C3%A0n_qu%E1%BB%91c">Youth Informatics Contest</a> 2023</li>
+              <li>Executive Committee of <a href="https://web.facebook.com/YCCLQD">Young Creation Club</a></li>
+              <li>Advanced to Top 15 National Final in <a href="https://vi.wikipedia.org/wiki/H%E1%BB%99i_thi_Tin_h%E1%BB%8Dc_tr%E1%BA%BB_To%C3%A0n_qu%E1%BB%91c">Youth Informatics Contest</a> 2023</li>
               <li>Semi-Finalist of U-Invent Season 4&5 (The University of Da Nang - VNUK) 2022-2023</li>
               <li>Second Prize at Municipal Science and Engineering Fair on Technical Science 2022</li>
-              <li>Designated Project Lead of team Memoka for the Youth-on! Hackathon 2021 (UNICEF Vietnam)</li>
+              <li>Project Lead for team Memoka at Youth-on! Hackathon 2021 (UNICEF Vietnam)</li>
             </ul>
-          </div>
+          </article>
         </div>
+
         <div class="timeline-item">
           <div class="timeline-bar-container">
             <div class="timeline-bar"></div>
             <div class="timeline-dot"></div>
           </div>
-          <div class="experience-card glass">
-            <div class="experience-header">
-              <img src="img/ScoutsVN.jpg" alt="Scouts Logo" class="experience-logo">
+          <article class="experience-card glass">
+            <header class="experience-header">
+              <img src="img/ScoutsVN.jpg" alt="Pathfinder Scouts Logo" class="experience-logo" />
               <div class="experience-info">
                 <h3>Pathfinder Scouts of Vietnam</h3>
                 <span class="experience-date">March 2016 – March 2021</span>
               </div>
-            </div>
+            </header>
             <ul class="experience-bullets">
-              <li>Senior Patrol Leader for a troop of 20+ scouts over 3 years</li>
-              <li>Spearheaded personal development and soft skills enhancement through diverse activities and camping experiences</li>
-              <li>Collaborated with other patrol leaders, scoutmasters, and parents to achieve successful outcomes for troop activities</li>
+              <li>Senior Patrol Leader for a troop of 20+ scouts</li>
+              <li>Enhanced personal development and soft skills through diverse activities</li>
+              <li>Collaborated with leaders, scoutmasters, and parents for troop success</li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
-    </section>         
+    </section>
 
-    <!-- Contact Section with Integrated Socials -->
+    <!-- Contact Section -->
     <section id="contact" class="section contact">
       <div class="contact-container glass">
         <div class="contact-info">
@@ -192,6 +194,7 @@
       </div>
     </section>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
