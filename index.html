@@ -1,23 +1,30 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paul Nguyen</title>
   <link rel="icon" href="img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
   <!-- Custom Cursor -->
   <div id="customCursor"></div>
 
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
   <!-- Particle Background Canvas -->
   <canvas id="particleCanvas"></canvas>
-  
+
   <!-- Header with Navigation -->
   <header>
     <nav class="navbar">
@@ -31,7 +38,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button id="modeToggle" class="toggle-switch">
-        <span id="toggleIcon" class="toggle-icon">☀️</span>
+        <span id="toggleIcon" class="toggle-icon">â˜€ï¸</span>
       </button>
     </nav>
   </header>
@@ -42,13 +49,24 @@
     <section id="hero" class="section hero">
       <h1 class="hero-title">Goal. Passion. Discipline.</h1>
       <p class="hero-subtitle">
-        I’m Paul, a Computer Science student passionate about technology. Discover my journey below.
+        I'm Paul, a Computer Science student passionate about <span id="typingText"></span><span
+          class="cursor-blink">|</span>
       </p>
       <div class="hero-buttons">
-        <a href="#about"><button class="explore-btn ripple">Explore My Work</button></a>
-        <a href="Resume.pdf" class="cv-btn ripple" download>
+        <a href="#about"><button class="explore-btn ripple magnetic">Explore My Work</button></a>
+        <a href="Resume.pdf" class="cv-btn ripple magnetic" download>
           <i class="fas fa-download"></i> Download CV
         </a>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div class="arrow-scroll">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </section>
 
@@ -59,7 +77,7 @@
         <img src="img/profile_photo.jpg" alt="Profile Photo of Paul" class="profile-photo" />
         <div class="about-text">
           <p>
-            Hi, I'm Paul—a second-year Computer Science student based in Australia.
+            Hi, I'm Paul - a second-year Computer Science student based in Australia.
             I love solving complex problems and turning creative ideas into practical solutions.
             When I'm not coding, you'll find me cycling, working out, or exploring new technologies.
             I'm passionate about continuous learning and building innovative digital experiences.
@@ -73,11 +91,13 @@
       <h2>Portfolio</h2>
       <div class="portfolio-grid">
         <article class="portfolio-card glass ripple">
-          <img src="img/VolunteerConnect.png" alt="Volunteer Connect Screenshot" class="portfolio-image" />
+          <img src="img/VolunteerConnect.png" alt="Volunteer Connect Screenshot"
+            class="portfolio-image" />
           <div class="portfolio-content">
             <h3>Volunteer Connect</h3>
             <p>Bringing together communities and organizations with just a few clicks</p>
-            <a href="https://github.com/TSSniper349/Volunteer_Connect" class="portfolio-link" target="_blank">
+            <a href="https://github.com/TSSniper349/Volunteer_Connect" class="portfolio-link"
+              target="_blank">
               <i class="fab fa-github"></i> View on GitHub
             </a>
           </div>
@@ -87,7 +107,8 @@
           <div class="portfolio-content">
             <h3>Comprehensive Emergency Guide</h3>
             <p>Step-by-step emergency guidance website designed to save lives</p>
-            <a href="https://github.com/TSSniper349/ComprehensiveEmergencyGuide" class="portfolio-link" target="_blank">
+            <a href="https://github.com/TSSniper349/ComprehensiveEmergencyGuide" class="portfolio-link"
+              target="_blank">
               <i class="fab fa-github"></i> View on GitHub
             </a>
           </div>
@@ -97,6 +118,12 @@
 
     <!-- Experience Section -->
     <section id="experience" class="section experience">
+      <!-- Floating Shapes Background -->
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
       <h2>Experience</h2>
       <div class="timeline-container">
         <div class="timeline-item">
@@ -109,16 +136,21 @@
               <img src="img/uoa_logo.gif" alt="University of Adelaide Logo" class="experience-logo" />
               <div class="experience-info">
                 <h3>The University of Adelaide</h3>
-                <span class="experience-date">July 2023 – Present</span>
+                <span class="experience-date">July 2023 - Present</span>
               </div>
             </header>
             <ul class="experience-bullets">
-              <li><a href="https://www.adelaide.edu.au/degree-finder/2025/bcmsa_bcmpscadv.html">Bachelor of Computer Science (Advanced)</a></li>
+              <li><a href="https://www.adelaide.edu.au/degree-finder/2025/bcmsa_bcmpscadv.html">Bachelor
+                  of Computer
+                  Science (Advanced)</a></li>
               <li>Developing a website to connect passionate volunteers with organizations</li>
               <li>GPA: 7.0, WAM: 92+</li>
               <li>The Executive Dean's Recognition of Academic Excellence - 2024</li>
               <li>Principles of Econmonics I Excellence Award for Outstanding Academic Achievement</li>
-              <li>Awarded <a href="https://www.adelaide.edu.au/student/global-iq-connect/what-is-global-iq-connect">Global IQ Connect</a></li>
+              <li>Awarded <a
+                  href="https://www.adelaide.edu.au/student/global-iq-connect/what-is-global-iq-connect">Global
+                  IQ
+                  Connect</a></li>
               <li>Recipient of the Global Citizens Scholarship</li>
             </ul>
           </article>
@@ -134,12 +166,15 @@
               <img src="img/LeQuyDonLogo.jpg" alt="Le Quy Don High School Logo" class="experience-logo" />
               <div class="experience-info">
                 <h3>Le Quy Don High School for the Gifted</h3>
-                <span class="experience-date">September 2020 – June 2023</span>
+                <span class="experience-date">September 2020 - June 2023</span>
               </div>
             </header>
             <ul class="experience-bullets">
-              <li>Executive Committee of <a href="https://web.facebook.com/YCCLQD">Young Creation Club</a></li>
-              <li>Advanced to Top 15 National Final in <a href="https://vi.wikipedia.org/wiki/H%E1%BB%99i_thi_Tin_h%E1%BB%8Dc_tr%E1%BA%BB_To%C3%A0n_qu%E1%BB%91c">Youth Informatics Contest</a> 2023</li>
+              <li>Executive Committee of <a href="https://web.facebook.com/YCCLQD">Young Creation Club</a>
+              </li>
+              <li>Advanced to Top 15 National Final in <a
+                  href="https://vi.wikipedia.org/wiki/H%E1%BB%99i_thi_Tin_h%E1%BB%8Dc_tr%E1%BA%BB_To%C3%A0n_qu%E1%BB%91c">Youth
+                  Informatics Contest</a> 2023</li>
               <li>Semi-Finalist of U-Invent Season 4&5 (The University of Da Nang - VNUK) 2022-2023</li>
               <li>Second Prize at Municipal Science and Engineering Fair on Technical Science 2022</li>
               <li>Project Lead for team Memoka at Youth-on! Hackathon 2021 (UNICEF Vietnam)</li>
@@ -157,7 +192,7 @@
               <img src="img/ScoutsVN.jpg" alt="Pathfinder Scouts Logo" class="experience-logo" />
               <div class="experience-info">
                 <h3>Pathfinder Scouts of Vietnam</h3>
-                <span class="experience-date">March 2016 – March 2021</span>
+                <span class="experience-date">March 2016 - March 2021</span>
               </div>
             </header>
             <ul class="experience-bullets">
@@ -176,7 +211,8 @@
         <div class="contact-info">
           <h2>Get in Touch</h2>
           <p>
-            Have a project idea or want to collaborate? Drop me a message and let's create something amazing together.
+            Have a project idea or want to collaborate? Drop me a message and let's create something
+            amazing together.
           </p>
           <a href="mailto:duybao21560@gmail.com">
             <button class="contact-btn ripple">Contact Me</button>
@@ -197,6 +233,16 @@
     </section>
   </main>
 
+  <!-- Back to Top Button -->
+  <div id="backToTop" class="back-to-top">
+    <svg class="progress-ring" width="50" height="50">
+      <circle class="progress-ring__circle" stroke="var(--brand-color)" stroke-width="4"
+        fill="transparent" r="20" cx="25" cy="25" />
+    </svg>
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
   <script src="script.js"></script>
 </body>
+
 </html>
